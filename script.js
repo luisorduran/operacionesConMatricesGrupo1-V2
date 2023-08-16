@@ -251,13 +251,14 @@ function solveEquation() {
       try {
         const sides = equation.split("=");
 
+        const variableMatch = equation.match(/[a-z]/i);
+        const variable = variableMatch ? variableMatch[0] : ""; // Obtener la variable de la ecuación
+
+        variables.push(variable); // Agregar la variable a la matriz de variables
+        console.log(variables);
+
         // Función para extraer coeficiente y constante de un lado de la ecuación
         const parseSide = (side) => {
-          const variableMatch = equation.match(/[a-z]/i);
-          const variable = variableMatch ? variableMatch[0] : ""; // Obtener la variable de la ecuación
-
-          variables.push(variable); // Agregar la variable a la matriz de variables
-
           const coefficientMatch = side.match(/(-?\d*)[a-z]/i);
           const constantMatch = side.match(/[+-]?\s*(\d+)$/);
 
@@ -290,7 +291,7 @@ function solveEquation() {
   // Actualizar el contenido del elemento HTML con las soluciones formateadas
   document.getElementById("resultEquations").value = solutions
     .map((solution, index) => {
-      const variable = variables[index] || "x"; // Usar 'x' si no se encontró ninguna variable
+      const variable = variables[index] || ""; // Usar 'x' si no se encontró ninguna variable
       return solution !== null
         ? `${variable} = ${solution}`
         : "Error en la ecuación";
