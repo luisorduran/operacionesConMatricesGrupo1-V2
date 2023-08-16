@@ -1,0 +1,424 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans";
+  background: #2c3e50;
+  color: #ecf0f1;
+  line-height: 1.618em;
+}
+
+header {
+  background-color: #1abc9c;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  height: 100px;
+  border-radius: 20px;
+  font: italic small-caps bold 16px/2 cursive;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1abc9c;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+h1 {
+  display: block;
+  margin: 0;
+  text-align: center;
+  font: italic small-caps bold 30px/2 cursive;
+}
+
+h2 {
+  margin-top: 30px;
+  font: italic small-caps bold 20px/2 cursive;
+}
+
+h3 {
+  text-align: center;
+  font: italic small-caps bold 16px/2 cursive;
+}
+
+p {
+  font-size: 20px;
+  font: italic small-caps bold 16px/2 cursive;
+}
+
+.logo {
+  width: 15%;
+  display: block;
+  margin-top: -95px;
+}
+
+.gifAyuda {
+  background-position: center;
+  height: 200px;
+}
+
+/*Matrices*/
+.matrix-list {
+  margin: 20px;
+}
+
+.matrix {
+  border: 5px solid #16a085;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#matrix-sum-sub,
+#matrix-multiply,
+#matrix-transpose,
+#matrix-equations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#matrix-sum-sub div,
+#matrix-multiply div,
+#matrix-transpose div,
+#matrix-equations div {
+  margin: 10px;
+}
+
+textarea {
+  width: 200px;
+  height: 100px;
+  border: 3px solid#16a085;
+  border-radius: 3px;
+}
+.resultadoOperacion {
+  
+  width: 200px;
+  height: 100px;
+  border: 3px solid#16a085;
+  border-radius: 3px;
+}
+
+.inputOperacion {
+  width: 120px;
+
+  border: 3px solid#16a085;
+  border-radius: 3px;
+}
+
+.matrizincognita {
+  width: 30px;
+  height: 100px;
+  border: 3px solid#16a085;
+  border-radius: 3px;
+}
+
+.buttons {
+  width: 100%;
+  text-align: center;
+}
+
+button {
+  border-radius: 10px;
+  border-top: 2px solid #545454;
+  border-left: 2px solid #545454;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  color: none;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #bdc3c7;
+  font: italic small-caps bold 16px/2 cursive;
+}
+
+button:hover {
+  background-color: #16a085;
+  color: white;
+}
+
+button:active {
+  background-color: #16a085;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.wrapper {
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 3rem 0;
+  background: #1abc9c;
+}
+
+.tabs::before,
+.tabs::after {
+  content: "";
+  display: table;
+}
+
+.tabs::after {
+  clear: both;
+}
+
+.tab {
+  float: left;
+}
+
+.tab-switch {
+  display: none;
+}
+
+.tab-label {
+  position: relative;
+  display: block;
+  line-height: 2.75em;
+  height: 3em;
+  padding: 0 1.618em;
+  background: #1abc9c;
+  border-right: 0.125rem solid #16a085;
+  color: #fff;
+  cursor: pointer;
+  top: 0;
+  transition: all 0.25s;
+  font-size: 1.1em;
+  font: italic small-caps bold 16px/2 cursive;
+}
+
+.tab-label:hover {
+  top: -0.25rem;
+  transition: top 0.25s;
+}
+
+.tab-content {
+  height: 40rem;
+  position: absolute;
+  z-index: 1;
+  top: 2.75em;
+  left: 0;
+  padding: 2.618rem;
+  background: #fff;
+  color: #2c3e50;
+  border-bottom: 0.25rem solid #bdc3c7;
+  opacity: 0;
+  transition: all 0.35s;
+}
+
+.tab-switch:checked + .tab-label {
+  background: #fff;
+  color: #2c3e50;
+  border-bottom: 0;
+  border-right: 0.125rem solid #fff;
+  transition: all 0.35s;
+  z-index: 1;
+  top: -0.0625rem;
+}
+
+.tab-switch:checked + label + .tab-content {
+  z-index: 2;
+  opacity: 1;
+  transition: all 0.35s;
+}
+
+#toggle-1 {
+  visibility: hidden;
+  opacity: 0;
+  position: relative;
+  z-index: -1;
+}
+
+#toggle-1:checked ~ dialog {
+  display: block;
+}
+
+#toggle-2 {
+  visibility: hidden;
+  opacity: 0;
+  position: relative;
+  z-index: -1;
+}
+
+#toggle-2:checked ~ dialog {
+  display: block;
+}
+
+#toggle-3 {
+  visibility: hidden;
+  opacity: 0;
+  position: relative;
+  z-index: -1;
+}
+
+#toggle-3:checked ~ dialog {
+  display: block;
+}
+
+#toggle-4 {
+  visibility: hidden;
+  opacity: 0;
+  position: relative;
+  z-index: -1;
+}
+
+#toggle-4:checked ~ dialog {
+  display: block;
+}
+
+.labelAyuda {
+  border-radius: 10px;
+  border-top: 2px solid #545454;
+  border-left: 2px solid #545454;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  color: none;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #bdc3c7;
+  font: italic small-caps bold 16px/2 cursive;
+}
+
+.checkbox{
+  display: none;
+}
+.labelAyuda:hover {
+  background-color: #16a085;
+  color: white;
+}
+
+.labelAyuda:active {
+  background-color: #16a085;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+dialog {
+  animation: appear 350ms ease-in 1;
+  max-width: 800px;
+  margin-top: -35rem;
+  margin-bottom: 30rem;
+  border: 5px solid #16a085;
+  border-radius: 50px;
+}
+
+/* CSS de la sección de ayuda */
+.section {
+  margin: 20px;
+}
+
+.step {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.column {
+  width: calc(25% - 20px);
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.column img {
+  max-width: 100%;
+}
+
+.column h3 {
+  margin-top: 10px;
+}
+
+.column p {
+  margin-top: 5px;
+}
+
+/* CSS de la de ayuda del botón*/
+
+.step-help {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.column-help {
+  width: calc(50% - 30px);
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.column-help img {
+  max-width: 100%;
+}
+
+.column-help h3 {
+  margin-top: 10px;
+}
+
+.column-help p {
+  margin-top: 5px;
+}
+
+/* Media queries para tamaños de pantalla */
+
+/* Pantallas pequeñas (móviles) */
+@media (min-width: 320px) and (max-width: 480px) {
+  /* CSS de la sección de ayuda */
+  .column {
+    width: calc(100% - 10px);
+  }
+
+  /* CSS de la de ayuda del botón*/
+
+  .column-help {
+    width: calc(100% - 30px);
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  /* CSS de la sección de ayuda */
+  .column {
+    width: calc(50% - 20px);
+  }
+
+  /* CSS de la de ayuda del botón*/
+
+  .column-help {
+    width: calc(100% - 30px);
+  }
+}

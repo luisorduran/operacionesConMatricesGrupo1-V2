@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./teorias.css" />
+    <title>Explicación de multiplicación de Matrices</title>
+  </head>
+  <body>
+    <header>
+      <h1>Explicación de multiplicación de Matrices</h1>
+    </header>
+    <div class="container">
+      <h2>Introducción</h2>
+      <p>
+        El producto de matrices es una operación que se realiza entre dos
+        matrices y resulta en una nueva matriz. Para que dos matrices puedan ser
+        multiplicadas, el número de columnas de la primera matriz debe ser igual
+        al número de filas de la segunda matriz.
+      </p>
+
+      <p>Supongamos que tenemos las siguientes dos matrices:</p>
+      <img
+        width="400"
+        src="../images/manual/multiplicacion/ejemplo-multi-1.png"
+        alt=""
+      />
+      <h2>Procedimiento</h2>
+      <ol>
+        <li>
+          <p>
+            <strong>Verificar la compatibilidad de las matrices:</strong> La
+            matriz A tiene 3 filas y 2 columnas, mientras que la matriz B tiene
+            2 filas y 2 columnas. El número de columnas de A es igual al número
+            de filas de B, por lo tanto, las matrices son compatibles para la
+            multiplicación.
+          </p>
+          <img
+            width="400"
+            src="../images/manual/multiplicacion/ejemplo-multi-2.png"
+            alt=""
+          />
+        </li>
+        <li>
+          <p>
+            <strong
+              >Multiplicar los elementos correspondientes y sumarlos:</strong
+            >
+            Para calcular cada elemento de la matriz resultante, multiplicamos
+            los elementos de la fila correspondiente de la matriz A por los
+            elementos de la columna correspondiente de la matriz B, y luego
+            sumamos los resultados.
+          </p>
+          <img
+            width="600"
+            src="../images/manual/multiplicacion/ejemplo-multi-3.png"
+            alt=""
+          />
+        </li>
+        <li>
+          <p>
+            <strong>Construir la matriz resultante:</strong> Creamos una nueva
+            matriz, llamada C, con los resultados obtenidos en el paso anterior.
+            La matriz resultante C tendrá 3 filas y 2 columnas.
+          </p>
+          <img
+            width="200"
+            src="../images/manual/multiplicacion/ejemplo-multi-4.png"
+            alt=""
+          />
+        </li>
+      </ol>
+      <h2>Operación completa</h2>
+      <img
+        width="600"
+        src="../images/manual/multiplicacion/ejemplo-multi-5.png"
+        alt=""
+      />
+      <p>
+        Siguiendo estos pasos, hemos realizado el producto de las matrices A y
+        B, y obtenido la matriz resultante C. Cada elemento de la matriz
+        resultante es el resultado de multiplicar los elementos correspondientes
+        de las matrices originales y luego sumarlos.
+      </p>
+      <div>
+        <button onclick="window.location.href='../index.html'">
+          Ir a Operatix
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
